@@ -1,0 +1,594 @@
+@charset "utf-8";
+
+/* -------------------------------------
+-----------------共通------------------
+--------------------------------------- */
+. {
+  color: var(--txt-color);
+}
+/*css関数を使用した色定義方法*/
+/* font-weightはboldかかっているので
+regularになっているものはnormalをつける */
+.shop-sec-padding {
+  padding: 0 45px;
+}
+.shop-space-top {
+  margin-top: 20px;
+}
+section {
+  margin-top: 30px;
+}
+@media screen and (min-width: 600px) {
+  .shop-sec-padding {
+    padding: 0 8%;
+  }
+  section {
+    margin-top: 45px;
+  }
+  .shop-space-top {
+    /* margin-top: 45px; */
+  }
+}
+@media screen and (min-width: 1025px) {
+  .shop-sec-padding {
+    padding: 0 20%;
+  }
+  section {
+    margin-top: 85px;
+  }
+  .shop-space-top {
+    margin-top: 45px;
+  }
+}
+
+.index-mark1::before {
+  content: "";
+  background-color: var(--accent-color);
+  margin-right: 2px;
+  width: 8px;
+  height: 1.2rem;
+  display: inline-block;
+}
+.index-mark2::before {
+  content: "";
+  background-color: var(--accent-color);
+  margin-right: 6px;
+  width: 4px;
+  height: 1rem;
+  display: inline-block;
+}
+@media screen and (min-width: 1025px) {
+  .index-mark1::before {
+    margin-right: 2.5px;
+    width: 20px;
+    height: 2rem;
+  }
+  .index-mark2::before {
+    margin-right: 15px;
+    width: 6.5px;
+    height: 1.8rem;
+    margin-top: 5px;
+  }
+}
+/* -------------------------------------
+------店名詳細記事ヘッダー？----------
+--------------------------------------- */
+.single-shop-top {
+  width: 100%;
+  color: var(--sub-color);
+  background-image: url(../img/s-shop-top.jpg);
+  background-size: cover;
+}
+
+/* -----single-shop-pkz パンくずリスト---- */
+.single-shop-pkz {
+  background-color: black;
+  height: 33px;
+  font-size: 12px;
+  font-weight: normal;
+}
+.pkz-ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  vertical-align: middle;
+}
+.pkz-ul li {
+  padding-left: 2px;
+}
+.pkz-ul li + li:before {
+  content: "";
+  border-top: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+  color: darkgray;
+  margin-right: 4px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 1025px) {
+  .single-shop-pkz {
+    height: 49px;
+    font-size: 24px;
+  }
+  .pkz-ul {
+  }
+  .pkz-ul li {
+  }
+  .pkz-ul li + li:before {
+  }
+}
+
+/* ---single-shop-hero ヒーローイメージ--- */
+.single-shop-hero {
+  height: 115px;
+  position: relative;
+}
+.shop-hero-wrap {
+  padding-top: 31px;
+}
+.shop-hero-title {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.shop-hero-ul {
+  display: flex;
+}
+.shop-hero-ul li {
+  font-size: 10px;
+  vertical-align: middle;
+  text-align: center;
+  padding: 2px 5px 0;
+}
+.shop-hero-ul li + li {
+  margin-left: 5px;
+}
+
+@media screen and (min-width: 1025px) {
+  .single-shop-hero {
+    height: 304px;
+  }
+  .shop-hero-wrap {
+    padding-top: 80px;
+  }
+  .shop-hero-title {
+    font-size: 60px;
+    padding-bottom: 0px;
+    /* line-height: 1.6; */
+  }
+  .shop-hero-ul {
+  }
+  .shop-hero-ul li {
+    font-size: 22px;
+    margin-top: 40px;
+  }
+  .shop-hero-ul li + li {
+  }
+}
+/* ---------------
+-----メイン-------
+---------------- */
+/* -------------------------------------
+-----店名、キャッチコピー、紹介文-------
+--------------------------------------- */
+.shop-detail-name {
+  font-size: 24px;
+  line-height: 1.625;
+  font-weight: bold;
+}
+.shop-detail-catchcopy {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.66;
+}
+@media screen and (min-width: 1025px) {
+  .shop-detail {
+    margin-top: 60px;
+  }
+  .shop-detail-name {
+    font-size: 42px;
+  }
+  .shop-detail-catchcopy {
+    font-size: 24px;
+  }
+}
+
+/* -------店舗画像------- */
+.shop-detall-ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.shop-detall-ul li {
+  width: calc((100% / 4) - 3px);
+  height: 70px;
+  margin-top: 3px;
+}
+.shop-detall-ul li img {
+  height: 100%;
+}
+.shop-detall-ul li:first-of-type {
+  width: 100%;
+  height: 205.8px;
+}
+
+/* -------詳細説明------- */
+.shop-detall-txt {
+  font-weight: normal;
+}
+
+@media screen and (min-width: 1025px) {
+  .shop-detall-ul {
+    margin-top: 95px;
+    height: 590px;
+  }
+  .shop-detall-ul li:first-of-type {
+    height: 330px;
+  }
+  .shop-detall-ul li {
+    width: calc((100% / 4) - 3px);
+    height: 255px;
+    margin-top: 3px;
+  }
+  .shop-detall-txt {
+    padding-top: 20px;
+  }
+}
+
+/* -------------------------------------
+-----店の特徴メーター領域-----------
+--------------------------------------- */
+.shop-meter-img {
+  height: 123.05px;
+}
+.shop-meter img {
+  height: 100%;
+}
+@media screen and (min-width: 1025px) {
+  .shop-meter {
+  }
+  .shop-meter-img {
+    height: 315px;
+    padding-left: 75px;
+  }
+}
+
+/* -------------------------------------
+-----基本情報、地図--------
+--------------------------------------- */
+
+/* ------基本情報-------- */
+.shop-basic-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.shop-basic-table tr {
+  font-size: 12px;
+  height: 31px;
+  width: 100%;
+}
+.shop-basic-table th {
+  background-color: var(--sub-color);
+  width: 83px;
+  padding-left: 11px;
+  vertical-align: middle;
+  border: 1px solid var(--main-color);
+  border-style: solid none;
+}
+.shop-basic-table td {
+  width: calc(100% - 83px);
+  padding-left: 11px;
+  vertical-align: middle;
+  border: 1px solid var(--main-color);
+  border-style: solid none;
+}
+@media screen and (min-width: 1506px) {
+  .shop-basic-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .shop-basic-table {
+    width: 49%;
+  }
+  .shop-basic-table tr {
+    font-size: 22px;
+    height: 60px;
+  }
+  .shop-basic-table th {
+    width: 141px;
+  }
+}
+
+/* ---------地図----------- */
+.shop-map {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.shop-map iframe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 1506px) {
+  .shop-map {
+    width: 49%;
+    height: auto;
+  }
+}
+
+/* -------------------------------------
+-----#食べレポInstagram埋め込み領域------
+--------------------------------------- */
+.shop-report h2 {
+  margin-bottom: 8px;
+}
+.shop-report-Instagram {
+  width: 100%;
+  height: 397px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 8px;
+}
+.shop-report-Instagram img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 1025px) {
+  .shop-report h2 {
+  }
+  .shop-report-Instagram {
+    max-width: 1130px;
+    height: 1160px;
+    margin-top: 60px;
+  }
+  .shop-report-Instagram img {
+    width: 100%;
+    height: 100%;
+  }
+}
+/* -------------------------------------
+-----一覧に戻る------------
+--------------------------------------- */
+.shop-link-btn {
+  text-align: center;
+}
+.archive-back-btn {
+  width: 177px;
+  height: 49px;
+  border-radius: 5px;
+}
+.archive-back-btn h2 {
+  font-size: 12px;
+}
+@media screen and (min-width: 1025px) {
+  .archive-back-btn {
+    margin-top: 100px;
+    width: 315px;
+    height: 86px;
+    border-radius: 5px;
+  }
+  .archive-back-btn h2 {
+    font-size: 20px;
+  }
+}
+
+/* -------------------------------------
+-----いいねボタン、SNSリンクアイコン----
+--------------------------------------- */
+.sns-link-btn {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+.sns-link-btn li {
+  width: 30px;
+  height: 31px;
+}
+.sns-link-btn li:first-of-type {
+  width: 107px;
+}
+.shop-good button {
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
+  border: 1px solid rgb(32, 32, 32);
+  border-radius: 5px;
+  color: gray;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  .sns-link-btn {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .sns-link-btn {
+    width: 470px;
+    margin-top: 76px;
+  }
+  .sns-link-btn li {
+    width: 52px;
+    height: 53px;
+  }
+  .sns-link-btn li:first-of-type {
+    width: 203px;
+    height: 47px;
+  }
+  .shop-good button {
+    width: 100%;
+    height: 100%;
+    font-size: 21px;
+    border: 1px solid rgb(32, 32, 32);
+    border-radius: 5px;
+    color: red;
+    text-align: center;
+  }
+}
+
+/* -------------------------------------
+------------おすすめ店舗--------------
+--------------------------------------- */
+.single-shop-recom {
+  margin-top: 59px;
+}
+.shop-recom-h3 {
+  font-size: 14px;
+  line-height: 1.57;
+  text-align: center;
+}
+
+.recom-ul {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 500px) {
+  .single-shop-recom {
+    margin-top: 81px;
+  }
+  .shop-recom-h3 {
+    /* font-size: 30px; */
+  }
+  .recom-ul {
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .shop-recom-h3 {
+    font-size: 30px;
+  }
+  .recom-ul {
+    margin-top: 90px;
+    margin-bottom: 135px;
+  }
+}
+
+/* ------------記事ごと------------- */
+.recom-ul li + li {
+  padding-top: 15px;
+}
+/* -----------サムネイル------------- */
+.recom-img {
+  height: 181px;
+  position: relative;
+}
+.recom-img-bg {
+  height: 181px;
+  z-index: -1;
+}
+
+@media screen and (min-width: 500px) {
+  .recom-ul li + li {
+    padding-top: 0px;
+  }
+  .recom-img {
+    height: auto;
+  }
+  .recom-ul li {
+    width: 47%;
+    margin-top: 0px;
+  }
+  .recom-img-bg {
+    width: 100%;
+    height: 200px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .recom-img-bg {
+    height: 430px;
+  }
+  .recom-ul li {
+    margin-top: 50px;
+  }
+}
+
+/* ------------カテゴリ------------- */
+.recom-img-cat {
+}
+.recom-eye {
+  font-size: 10px;
+  padding: 5px 10px;
+  color: rgb(253, 253, 253);
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media screen and (min-width: 1025px) {
+  .recom-eye {
+    font-size: 25px;
+  }
+}
+/* ------本格、なる、bg色------- */
+.honkaku {
+  background-color: var(--honkaku-color);
+}
+.naru {
+  background-color: var(--naru-color);
+}
+.tarai {
+  background-color: var(--tarai-color);
+}
+
+/* ----------いいねボタン--------- */
+.recom-img-good {
+  width: 45px;
+  height: 39px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.recom-img-good img {
+  height: 38px;
+  object-fit: contain;
+}
+@media screen and (min-width: 1025px) {
+  .recom-img-good {
+    width: 57px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .recom-img-good img {
+    object-fit: contain;
+  }
+}
+
+/* ---------記事タイトル---------- */
+.recom-title {
+  padding-top: 8px;
+}
+.recom-txt {
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: normal;
+  padding-top: 5px;
+}
+
+@media screen and (min-width: 1025px) {
+  .recom-title {
+    padding-top: 31px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .recom-txt {
+    font-size: 24px;
+    line-height: 1.6;
+    font-weight: normal;
+    padding-top: 20px;
+  }
+}
